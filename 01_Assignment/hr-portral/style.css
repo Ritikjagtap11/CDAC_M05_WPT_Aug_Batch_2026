@@ -1,0 +1,132 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #EC407A, #9C27B0);
+    padding: 30px 15px;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+}
+
+/* Onboarding form */
+.onbord-form {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Form heading */
+.onbord-form h2 {
+    text-align: center;
+    color: #9C27B0;
+    margin-bottom: 30px;
+}
+
+/* Labels */
+.onbord-form label {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Text inputs, date, time, select and textarea */
+.onbord-form input:not([type="radio"]):not([type="checkbox"]),
+.onbord-form select,
+.onbord-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* Focus effect */
+.onbord-form input:focus,
+.onbord-form select:focus,
+.onbord-form textarea:focus {
+    border-color: #EC407A;
+    box-shadow: 0 0 5px rgba(236, 64, 122, 0.25);
+}
+
+/* Radio buttons and checkbox */
+.onbord-form input[type="radio"],
+.onbord-form input[type="checkbox"] {
+    accent-color: #EC407A;
+    cursor: pointer;
+}
+
+.onbord-form input[type="radio"] + label {
+    margin: 10px 15px 10px 5px;
+    font-weight: normal;
+}
+
+.onbord-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Buttons */
+.onbord-form .btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.onbord-form button {
+    flex: 1;
+    min-width: 100px;
+    padding: 12px;
+    border: 1px solid #EC407A;
+    border-radius: 5px;
+    background-color: #EC407A;
+    color: white;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+/* Button hover */
+.onbord-form button:hover {
+    background-color: #9C27B0;
+    border-color: #9C27B0;
+}
+
+/* Map */
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .onbord-form {
+        padding: 20px;
+    }
+
+    .onbord-form .btn {
+        flex-direction: column;
+    }
+}
+
+
