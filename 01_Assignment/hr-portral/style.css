@@ -1,81 +1,147 @@
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #EC407A, #9C27B0);
+    background: linear-gradient(#EC407A, #9C27B0);
+    min-height: 100vh;
     padding: 30px 15px;
+    color: #2C3E50;
 }
 
-/* Main container */
-.container {
-    width: 100%;
-}
-
-/* Onboarding form */
-.onbord-form {
-    width: 100%;
-    max-width: 800px;
-    background-color: white;
-    color: #333;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 35px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Form heading */
-.onbord-form h2 {
+h2 {
     text-align: center;
-    color: #9C27B0;
+    margin-bottom: 25px;
+    color: #2C3E50;
+}
+
+
+/* login page */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 100%;
+    max-width: 500px;
+    min-height: 400px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.login h2 {
     margin-bottom: 30px;
 }
 
-/* Labels */
-.onbord-form label {
-    display: inline-block;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    font-size: 15px;
+.login form input {
+    width: 100%;
+    height: 50px;
+    margin: 15px 0;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #EC407A;
+    font-size: 16px;
+}
+
+#btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 25px;
+    border: 1px solid #EC407A;
+    border-radius: 10px;
+    background-color: #EC407A;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+#btn:hover {
+    background-color: white;
+    color: #EC407A;
+}
+
+.link-signup {
+    margin-top: 25px;
+}
+
+.link-signup p a {
+    color: #EC407A;
+    text-decoration: none;
     font-weight: bold;
 }
 
-/* Text inputs, date, time, select and textarea */
+.link-signup p a:hover {
+    color: #9C27B0;
+    text-decoration: underline;
+}
+
+
+/* onboarding page */
+
+.onboarding-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.onbord-form {
+    width: 100%;
+    padding: 35px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.onbord-form h2 {
+    margin-bottom: 25px;
+}
+
+.onbord-form label {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
 .onbord-form input:not([type="radio"]):not([type="checkbox"]),
 .onbord-form select,
 .onbord-form textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    outline: none;
-    font-size: 14px;
-    background-color: #fff;
+    font-size: 15px;
 }
 
-/* Focus effect */
 .onbord-form input:focus,
 .onbord-form select:focus,
 .onbord-form textarea:focus {
+    outline: none;
     border-color: #EC407A;
-    box-shadow: 0 0 5px rgba(236, 64, 122, 0.25);
 }
 
-/* Radio buttons and checkbox */
 .onbord-form input[type="radio"],
 .onbord-form input[type="checkbox"] {
+    margin: 12px 5px 12px 0;
     accent-color: #EC407A;
-    cursor: pointer;
-}
-
-.onbord-form input[type="radio"] + label {
-    margin: 10px 15px 10px 5px;
-    font-weight: normal;
 }
 
 .onbord-form textarea {
@@ -83,15 +149,18 @@ body {
     resize: vertical;
 }
 
-/* Buttons */
+.onbord-form input[type="file"] {
+    background-color: #F8F9FA;
+}
+
 .onbord-form .btn {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
-.onbord-form button {
+.onbord-form .btn button {
     flex: 1;
     min-width: 100px;
     padding: 12px;
@@ -103,30 +172,66 @@ body {
     transition: 300ms;
 }
 
-/* Button hover */
-.onbord-form button:hover {
-    background-color: #9C27B0;
-    border-color: #9C27B0;
+.onbord-form .btn button:hover {
+    background-color: white;
+    color: #EC407A;
 }
 
-/* Map */
-iframe {
-    display: block;
+.onboarding-page iframe {
     width: 100%;
     max-width: 800px;
-    margin: 30px auto;
+    border: 0;
     border-radius: 10px;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-    .onbord-form {
-        padding: 20px;
-    }
+/* employee page */
 
-    .onbord-form .btn {
-        flex-direction: column;
-    }
+.directory-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.directory-page h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.directory-page table {
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.directory-page th {
+    background-color: #EC407A;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.directory-page td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.directory-page tbody tr:nth-child(even) {
+    background-color: #F8F9FA;
+}
+
+.directory-page tbody tr:hover {
+    background-color: #FCE4EC;
+}
+
+.directory-page .total {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
