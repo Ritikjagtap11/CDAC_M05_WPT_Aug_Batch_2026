@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="header-logo">
+                <img src="images/photo.png" alt="Ritik Jagtap">
+                <h2>| Ritik Jagtap</h2>
+            </div>
+
+            <div class="header-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Project</a>
+                <a href="">Experience</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="POST"
+                  onsubmit="return validate()">
+
+                <h2>Contact Me</h2>
+                <p>Feel free to get in touch with me.</p>
+
+                <!-- Name -->
+                <div>
+                    <div>
+                        <label for="name">Name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="name" name="name"
+                               placeholder="Enter name" onkeyup="validateName()">
+                        <span id="error-name" class="error-span"></span>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <div>
+                        <label for="email">Email</label>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email"
+                               placeholder="Enter email" onkeyup="validateEmail()">
+                        <span id="error-email" class="error-span"></span>
+                    </div>
+                </div>
+
+                <!-- Contact Date -->
+                <div>
+                    <div>
+                        <label for="date">Contact Date</label>
+                    </div>
+                    <div>
+                        <input type="date" id="date" name="date" onchange="validateDate()">
+                        <span id="error-date" class="error-span"></span>
+                    </div>
+                </div>
+
+                <!-- Enquiry Dropdown -->
+                <div>
+                    <div>
+                        <label for="enquiry">Enquiry Type</label>
+                    </div>
+                    <div>
+                        <select name="enquiry" id="enquiry" onchange="validateEnquiry()">
+                            <option value="">-- Select Enquiry Type --</option>
+                            <option value="1">Full Stack Developer</option>
+                            <option value="2">Database Integration</option>
+                            <option value="3">Backend Developer</option>
+                        </select>
+                        <span id="error-enquiry" class="error-span"></span>
+                    </div>
+                </div>
+
+                <!-- Contact Mode -->
+                <div>
+                    <div>
+                        <label>Contact Mode</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="phone"
+                               name="contact-mode" value="phone" onchange="validateContactMode()">
+                        <label for="phone">Phone</label>
+
+                        <input type="radio" id="message"
+                               name="contact-mode" value="message" onchange="validateContactMode()">
+                        <label for="message">Message</label>
+                    </div>
+                    <span id="error-contact-mode" class="error-span"></span>
+                </div>
+
+                <!-- File Upload -->
+                <div>
+                    <div>
+                        <label for="file">Upload File</label>
+                    </div>
+                    <div>
+                        <input type="file" id="file" name="file" onchange="validateFile()">
+                    </div>
+                    <span id="error-file" class="error-span"></span>
+                </div>
+
+                <!-- Submit -->
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/contact.js"></script>
+</body>
+</html>

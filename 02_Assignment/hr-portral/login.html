@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=d, initial-scale=1.0" />
+    <link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>login</title>
+  </head>
+  <body class="login-page">
+    <div class="login">
+      <h2>Login</h2>
+      <form action="#" method="get" onsubmit="return validate();">
+        <div>
+          <input
+            type="text"
+            placeholder="Enter username"
+            id="username"
+            name="username"
+            onkeyup="validateUsername()"
+          />
+          <span id="error-username" class="error-span"></span>
+        </div>
+
+        <div class="password-container">
+          <input
+            type="password"
+            placeholder="Enter password"
+            id="password"
+            name="password"
+            onkeyup="validatePassword()"
+          />
+
+          <i
+            class="fa-solid fa-eye"
+            id="togglePassword"
+            onclick="togglePassword()"
+          ></i>
+
+          <span id="error-password" class="error-span"></span>
+        </div>
+
+        <button id="btn" type="submit">Submit</button>
+
+        <div class="link-signup">
+          <p>Need an account? <a href="#">SignUp</a></p>
+        </div>
+      </form>
+      <script src="Js/login.js"></script>
+    </div>
+  </body>
+</html>

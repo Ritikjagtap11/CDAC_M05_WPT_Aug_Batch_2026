@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    //   var arr = [10, 45, 32, 76, 45, 61, 78];
+
+    //   arr.forEach((n)=> console.log(n));
+
+    //   let even = arr.filter((n) => n % 2 == 0);
+    //   let product = arr.map((n) => n*n);
+    //   let sum = arr.reduce((n)=>n+=n);
+    //   console.log(even,product,sum);
+
+    //   let add = (a,b)=>{
+    //     return a + b;
+    //   };
+      
+    //   console.log("Sum is",add(10,20));
+
+     async function sum(a,b){
+        return new Promise((resolve,reject)=>{
+            resolve(a+b);
+        });
+      }
+
+      async function handleSum() {
+        try {
+        let result =  await sum(2,5);
+        console.log(result);
+       } catch (error) {
+        console.log(error);
+       }
+        
+      }
+
+      handleSum();
+       
+        
+
+      
+      
+    </script>
+  </body>
+</html>

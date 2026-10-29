@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Employee directory</title>
+</head>
+<body class="directory-page">
+    
+    <h2>Employee Directory</h2>
+    <select id="Selection-filed">
+        <option value="">--choose options--</option>
+        <option value="name">Name</option>
+        <option value="username">Username</option>
+        <option value="email">Email</option>
+    </select>
+    <input id="serach-box" type="text" placeholder="choice choose first">
+    <button id="search-btn" onclick="search_filter()" >Search</button>
+    <button type="button" onclick="loadEmployee()">Load Employee</button>
+    <table border="1" cellspacing="0" cellpadding="10px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Website</th>
+                <th>Company Name</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody id="employeeData">
+        </tbody>
+    </table>
+    <p id="message"></p>
+    <p class="total" id="totalEmployee"></p>
+    <div class="add-container">
+        <form action="">
+            <input id="addempname" type="text" placeholder="empployee name">
+            <input id="addempcompany" type="text" placeholder="company name">
+            <button type="button" onclick="addEmployee()">add</button>
+        </form>
+    </div>
+    <script src="Js/directory.js"></script>
+</body>
+</html>
